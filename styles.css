@@ -1,0 +1,31 @@
+:root{--ink:#16313b;--blue:#176b87;--sky:#dff3fa;--pale:#f3fafc;--gold:#f0a43b;--white:#fff;--shadow:0 8px 24px rgba(18,65,82,.13)}
+*{box-sizing:border-box}
+body{margin:0;background:#fbfdfd;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+button{font:inherit}
+.hero{text-align:center;padding:32px 18px 25px;background:linear-gradient(145deg,#dff3fa,#fff8e9);border-bottom:1px solid #c6e5ee}
+.eyebrow{margin:0 0 6px;font-size:.78rem;font-weight:800;letter-spacing:.13em;color:var(--blue)}
+h1{margin:0;font-size:clamp(2rem,7vw,3.4rem);line-height:1.05}
+.instructions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:14px auto 10px;font-size:clamp(1rem,3vw,1.25rem);font-weight:750;color:#315966}
+.stop{border:0;border-radius:999px;padding:9px 16px;background:#fff;color:#87511a;box-shadow:0 2px 8px rgba(0,0,0,.08);cursor:pointer}
+main{width:min(1120px,calc(100% - 28px));margin:auto}
+section{padding:38px 0 10px}
+h2{margin:0;font-size:clamp(1.7rem,5vw,2.25rem);line-height:1.15}
+.hint{margin:6px 0 17px;color:#5b747c;font-weight:650}
+.section-heading{display:flex;gap:16px;align-items:end;justify-content:space-between;margin-bottom:15px}
+.listen-pill{border:2px solid var(--blue);border-radius:999px;padding:12px 18px;background:white;color:var(--blue);font-weight:800;cursor:pointer}
+.card-grid{display:grid;gap:18px}.card-grid.four{grid-template-columns:repeat(4,1fr)}.card-grid.two{grid-template-columns:repeat(2,1fr)}
+.phrase-card{position:relative;padding:0 0 15px;border:2px solid #bce2ef;border-radius:22px;background:var(--white);color:var(--ink);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:transform .14s,box-shadow .14s,border-color .14s}
+.phrase-card:hover,.phrase-card:focus-visible{transform:translateY(-3px);box-shadow:0 12px 28px rgba(18,65,82,.2);border-color:var(--blue);outline:none}
+.phrase-card.playing{border-color:var(--gold);box-shadow:0 0 0 5px rgba(240,164,59,.22),var(--shadow)}
+.phrase-card img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:white}
+.phrase-card>span{display:block;padding:13px 8px 1px;font-family:Georgia,serif;font-size:clamp(1.05rem,2.2vw,1.45rem);font-weight:800}
+.phrase-card small{display:block;margin-top:5px;color:var(--blue);font-size:.78rem;font-weight:800}
+.practice{margin:32px 0 42px;padding:28px;border-radius:24px;background:var(--sky)}
+.practice h2{text-align:center}.dialogue{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 15px}
+.dialogue button{display:flex;align-items:center;gap:10px;min-height:70px;border:2px solid transparent;border-radius:15px;padding:12px;background:white;color:var(--ink);font-family:Georgia,serif;font-size:1.15rem;font-weight:700;cursor:pointer;text-align:left}
+.dialogue button b{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:50%;background:var(--blue);color:white;font-family:system-ui,sans-serif;font-size:.9rem}.dialogue button span{margin-left:auto}
+.practice>p{text-align:center;margin:0;color:#41616c;font-weight:700}
+footer{text-align:center;padding:23px;background:#16313b;color:#dcecf0;font-size:.9rem}
+@media(max-width:820px){.card-grid.four{grid-template-columns:repeat(2,1fr)}.dialogue{grid-template-columns:1fr}.card-grid.two{gap:14px}}
+@media(max-width:520px){main{width:min(100% - 20px,1120px)}section{padding-top:30px}.card-grid.two{grid-template-columns:1fr}.phrase-card>span{font-size:1.25rem}.section-heading{align-items:start;flex-direction:column}.listen-pill{align-self:stretch}.practice{padding:22px 14px}.hero{padding-top:25px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
