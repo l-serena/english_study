@@ -224,12 +224,18 @@ footer{text-align:center;padding:23px;background:#16313b;color:#dcecf0;font-size
   text-align:center;
 }
 .identity-card{position:relative}
+.identity-card > img.flag-hero{
+  aspect-ratio:3/2;
+  object-fit:cover;
+  padding:0;
+  background:#000;
+}
 .identity-card .flag{
   position:absolute;
-  top:10px;
-  right:10px;
-  width:46px;
-  height:31px;
+  top:12px;
+  right:12px;
+  width:108px;
+  height:72px;
   padding:0;
   border-radius:4px;
   overflow:hidden;
@@ -267,31 +273,37 @@ footer{text-align:center;padding:23px;background:#16313b;color:#dcecf0;font-size
 }
 .restroom.female{
   color:#b23b6a;
-  -webkit-mask:url("images/icon-female.svg") center / contain no-repeat;
-  mask:url("images/icon-female.svg") center / contain no-repeat;
+  -webkit-mask:url("images/icon-female.svg?v=3") center / contain no-repeat;
+  mask:url("images/icon-female.svg?v=3") center / contain no-repeat;
 }
 .restroom.male{
   color:var(--blue);
-  -webkit-mask:url("images/icon-male.svg") center / contain no-repeat;
-  mask:url("images/icon-male.svg") center / contain no-repeat;
+  -webkit-mask:url("images/icon-male.svg?v=3") center / contain no-repeat;
+  mask:url("images/icon-male.svg?v=3") center / contain no-repeat;
 }
 .gender-icon .restroom{width:22px;height:34px;vertical-align:0}
 .big-icon .restroom{width:34px;height:52px;vertical-align:0}
 
 .example-card{
-  display:grid;
-  grid-template-columns:auto auto;
+  display:flex;
+  flex-direction:column;
   align-items:center;
-  justify-content:center;
-  gap:8px 12px;
-  min-height:168px;
-  padding:16px 14px;
+  padding:0 0 14px;
   text-align:center;
 }
-.example-card > b,
-.example-card > strong{grid-column:1 / -1}
+.example-card > img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  object-position:center 18%;
+  background:#fff;
+}
+.example-card > img.drawing{object-fit:contain;padding:18px}
+.example-card > b{margin-top:12px}
 .example-card > strong{
+  display:block;
+  padding:8px 12px 0;
   font-family:Georgia,serif;
   font-size:clamp(1.05rem,2vw,1.25rem);
 }
-.big-icon,.cake-icon{font-size:2rem;line-height:1}
