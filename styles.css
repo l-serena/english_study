@@ -269,17 +269,15 @@ footer{text-align:center;padding:23px;background:#16313b;color:#dcecf0;font-size
   width:16px;
   height:26px;
   vertical-align:-6px;
-  background-color:currentColor;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:contain;
 }
 .restroom.female{
-  color:#b23b6a;
-  -webkit-mask:url("images/icon-female.svg?v=3") center / contain no-repeat;
-  mask:url("images/icon-female.svg?v=3") center / contain no-repeat;
+  background-image:url("images/icon-female.png");
 }
 .restroom.male{
-  color:var(--blue);
-  -webkit-mask:url("images/icon-male.svg?v=3") center / contain no-repeat;
-  mask:url("images/icon-male.svg?v=3") center / contain no-repeat;
+  background-image:url("images/icon-male.png");
 }
 .gender-icon .restroom{width:22px;height:34px;vertical-align:0}
 .big-icon .restroom{width:34px;height:52px;vertical-align:0}
