@@ -65,3 +65,25 @@ clickable.forEach(button => {
 });
 
 document.querySelector("#stop-audio")?.addEventListener("click", stopAll);
+
+function fillBlocks(container, count, className) {
+  const total = Number(count) || 0;
+  const fragment = document.createDocumentFragment();
+
+  for (let i = 0; i < total; i += 1) {
+    const block = document.createElement("i");
+    block.className = className;
+    block.setAttribute("aria-hidden", "true");
+    fragment.appendChild(block);
+  }
+
+  container.replaceChildren(fragment);
+}
+
+document.querySelectorAll(".mini-count").forEach((container) => {
+  fillBlocks(container, container.dataset.count, "count-block");
+});
+
+document.querySelectorAll(".ten-bundles").forEach((container) => {
+  fillBlocks(container, container.dataset.tens, "ten-block");
+});
